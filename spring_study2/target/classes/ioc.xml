@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+">
+
+    <!--注册一个对象，spring回自动创建这个对象-->
+    <!--
+    一个bean标签就表示一个对象
+    id:这个对象的唯一标识
+    class:注册对象的完全限定名
+    -->
+    <bean id="person" class="com.zhy.bean.Person">
+        <!--使用property标签给对象的属性赋值
+        name:表示属性的名称
+        value：表示属性的值
+        -->
+        <property name="id" value="1"></property>
+        <property name="name" value="zhangsan"></property>
+        <property name="age" value="18"></property>
+        <property name="gender" value="男"></property>
+    </bean>
+    <!--指定构造函数的参数名-->
+    <bean id="person2" class="com.zhy.bean.Person">
+        <constructor-arg name="id" value="1"></constructor-arg>
+        <constructor-arg name="name" value="lisi"></constructor-arg>
+        <constructor-arg name="age" value="20"></constructor-arg>
+        <constructor-arg name="gender" value="女"></constructor-arg>
+    </bean>
+    <!--省略构造函数的参数名 但是严格按照构造函数参数顺序-->
+    <bean id="person3" class="com.zhy.bean.Person">
+        <constructor-arg value="2"></constructor-arg>
+        <constructor-arg value="wangwu"></constructor-arg>
+        <constructor-arg value="21"></constructor-arg>
+        <constructor-arg value="男"></constructor-arg>
+    </bean>
+    <!--通过index 属性指定顺序-->
+    <bean id="person4" class="com.zhy.bean.Person">
+        <constructor-arg value="女" index="3"></constructor-arg>
+        <constructor-arg value="20" index="2"></constructor-arg>
+        <constructor-arg value="zhaosi" index="1"></constructor-arg>
+        <constructor-arg value="1" index="0"></constructor-arg>
+    </bean>
+    <!--当有多个参数个数相同，不同类型的构造器的时候，可以通过type来强制类型-->
+    <bean id="person5" class="com.zhy.bean.Person">
+        <constructor-arg value="1"></constructor-arg>
+        <constructor-arg value="lisi"></constructor-arg>
+        <constructor-arg value="20" type="java.lang.Integer"></constructor-arg>
+    </bean>
+
+    <!--如果不修改为integer类型，那么需要type跟index组合使用-->
+    <bean id="person6" class="com.zhy.bean.Person">
+        <constructor-arg value="1"></constructor-arg>
+        <constructor-arg value="lisi"></constructor-arg>
+        <constructor-arg value="女"  index="2"></constructor-arg>
+    </bean>
+    <bean id="person7" class="com.zhy.bean.Person" p:id="3" p:age="22" p:name="丽萨丽萨" p:gender="女"/>
+</beans>
