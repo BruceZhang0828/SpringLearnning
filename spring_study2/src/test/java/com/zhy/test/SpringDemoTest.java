@@ -29,7 +29,14 @@ public class SpringDemoTest {
 //        test09(context2);
 //        test10(context2);
 //        test11(context2);
-        test12(context2);
+//        test12(context2);
+        test13(context2);
+    }
+
+    private static void test13(ApplicationContext context2) {
+        Person person = context2.getBean("person7", Person.class);
+        Person person7 = context2.getBean("person7", Person.class);
+        System.out.println(person == person7);
     }
 
     private static void test12(ApplicationContext context2) {

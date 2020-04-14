@@ -120,4 +120,16 @@
     <bean id="book3" class="com.zhy.bean.Book" depends-on="person6,address2"></bean>
     <bean id="address2" class="com.zhy.bean.Address"></bean>
     <bean id="person6" class="com.zhy.bean.Person"></bean>
+
+    <!--
+      bean的作用域：singleton、prototype、request、session Spring5去掉了后两个
+      默认情况下是单例的
+      prototype：多实例的
+          容器启动的时候不会创建多实例bean，只有在获取对象的时候才会创建该对象
+          每次创建都是一个新的对象
+      singleton：默认的单例对象
+          在容器启动完成之前就已经创建好对象
+          获取的所有对象都是同一个
+  -->
+    <bean id="person7" class="com.zhy.bean.Person" scope="prototype"></bean>
 </beans>
