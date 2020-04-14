@@ -154,4 +154,8 @@
     <bean id="person9" class="com.zhy.bean.Person" factory-bean="personInstanceFactory" factory-method="getPerson">
         <constructor-arg value="wangwu"></constructor-arg>
     </bean>
+
+    <bean id="myfactorybean" class="com.zhy.factory.MyFactoryBean"></bean>
+
+
 </beans>

@@ -2,6 +2,7 @@ package com.zhy.test;
 
 import com.zhy.bean.Book;
 import com.zhy.bean.Person;
+import com.zhy.factory.MyFactoryBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -32,7 +33,19 @@ public class SpringDemoTest {
 //        test12(context2);
 //        test13(context2);
 //        test14(context2);
-        test15(context2);
+//        test15(context2);
+        test16(context2);
+    }
+
+    private static void test16(ApplicationContext context2) {
+        try {
+            // 这里虽然注入的是工厂,但是直接就返回来你需要的类实例
+            Person person = context2.getBean("myfactorybean", Person.class);
+            // Person person = person1.getObject();
+            System.out.println(person);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private static void test15(ApplicationContext context2) {
