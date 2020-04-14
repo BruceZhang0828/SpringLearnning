@@ -56,5 +56,6 @@
         <constructor-arg value="lisi"></constructor-arg>
         <constructor-arg value="女"  index="2"></constructor-arg>
     </bean>
+    <!--使用命名空间p 就是简写p属性的操作-->
     <bean id="person7" class="com.zhy.bean.Person" p:id="3" p:age="22" p:name="丽萨丽萨" p:gender="女"/>
 </beans>

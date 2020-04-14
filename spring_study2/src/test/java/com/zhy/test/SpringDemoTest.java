@@ -25,7 +25,13 @@ public class SpringDemoTest {
 //        test08(context);
 
         ApplicationContext context2 = new ClassPathXmlApplicationContext("ioc2.xml");
-        test09(context2);
+//        test09(context2);
+        test10(context2);
+    }
+
+    private static void test10(ApplicationContext context2) {
+        Person person3 = context2.getBean("person3", Person.class);
+        System.out.println(person3);
     }
 
     private static void test09(ApplicationContext context) {

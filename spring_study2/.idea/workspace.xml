@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3c38a9e-d7b1-432a-957e-67886df916a3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhy/bean/Address.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/zhy/bean/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ioc2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/zhy/bean/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/zhy/bean/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ioc2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ioc2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/zhy/test/SpringDemoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zhy/test/SpringDemoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/zhy/bean/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhy/bean/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ioc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ioc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/zhy/test/SpringDemoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/zhy/test/SpringDemoTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -70,26 +68,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/ioc.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1248">
-              <caret line="52" column="45" lean-forward="true" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/ioc2.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="433">
-              <caret line="68" selection-start-line="68" selection-end-line="68" />
+            <state relative-caret-position="349">
+              <caret line="60" selection-start-line="60" selection-end-line="60" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/ioc2.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="301">
+              <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/zhy/test/SpringDemoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+            <state relative-caret-position="279">
+              <caret line="33" column="34" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -122,13 +120,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/ioc.xml" />
         <option value="$PROJECT_DIR$/src/readme.md" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhy/bean/Address.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhy/bean/Book.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhy/bean/Person.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/ioc2.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/ioc.xml" />
         <option value="$PROJECT_DIR$/src/test/java/com/zhy/test/SpringDemoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/ioc2.xml" />
       </list>
     </option>
   </component>
@@ -349,12 +347,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586826503929</updated>
-      <workItem from="1586826513059" duration="7511000" />
+      <workItem from="1586826513059" duration="7795000" />
     </task>
+    <task id="LOCAL-00001" summary="bean的复杂类型引入">
+      <created>1586848235254</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1586848235254</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7511000" />
+    <option name="totallyTimeSpent" value="7795000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1874" height="1096" extended-state="6" />
@@ -364,7 +370,7 @@
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24972253" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24972253" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Tail" />
       <window_info anchor="bottom" id="Messages" weight="0.32930845" />
@@ -381,7 +387,7 @@
       <window_info anchor="bottom" id="Debug with VisualVM" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32930845" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32930845" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -436,6 +442,10 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.md" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="bean的复杂类型引入" />
+    <option name="LAST_COMMIT_MESSAGE" value="bean的复杂类型引入" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
@@ -484,25 +494,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/ioc.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1248">
-          <caret line="52" column="45" lean-forward="true" selection-start-line="52" selection-start-column="45" selection-end-line="52" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/ioc2.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="349">
+          <caret line="60" selection-start-line="60" selection-end-line="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/zhy/test/SpringDemoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        <state relative-caret-position="279">
+          <caret line="33" column="34" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ioc2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
         </state>
       </provider>
     </entry>
