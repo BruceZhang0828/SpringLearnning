@@ -105,4 +105,15 @@
     <bean id="person3" class="com.zhy.bean.Person" parent="person2">
         <property name="name" value="lisi"></property>
     </bean>
+
+    <bean id="person4" class="com.zhy.bean.Person" abstract="true">
+        <property name="id" value="1"></property>
+        <property name="name" value="zhangsan"></property>
+        <property name="age" value="21"></property>
+        <property name="gender" value="男"></property>
+    </bean>
+    <!--parent:指定bean的配置信息继承于哪个bean-->
+    <bean id="person5" class="com.zhy.bean.Person" parent="person4">
+        <property name="name" value="lisi"></property>
+    </bean>
 </beans>
