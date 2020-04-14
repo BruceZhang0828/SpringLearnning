@@ -132,4 +132,26 @@
           获取的所有对象都是同一个
   -->
     <bean id="person7" class="com.zhy.bean.Person" scope="prototype"></bean>
+
+    <!--
+        静态工厂的使用：
+        class:指定静态工厂类
+        factory-method:指定哪个方法是工厂方法
+    -->
+    <bean id="person8" class="com.zhy.factory.PersonStaticFactory" factory-method="getPerson">
+        <!--constructor-arg：可以为方法指定参数-->
+        <constructor-arg value="lisi"></constructor-arg>
+    </bean>
+
+
+    <!--实例工厂使用-->
+    <!--创建实例工厂类-->
+    <bean id="personInstanceFactory" class="com.zhy.factory.PersonInstanceFactory"></bean>
+    <!--
+    factory-bean:指定使用哪个工厂实例
+    factory-method:指定使用哪个工厂实例的方法
+    -->
+    <bean id="person9" class="com.zhy.bean.Person" factory-bean="personInstanceFactory" factory-method="getPerson">
+        <constructor-arg value="wangwu"></constructor-arg>
+    </bean>
 </beans>

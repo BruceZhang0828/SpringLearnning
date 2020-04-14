@@ -30,7 +30,19 @@ public class SpringDemoTest {
 //        test10(context2);
 //        test11(context2);
 //        test12(context2);
-        test13(context2);
+//        test13(context2);
+//        test14(context2);
+        test15(context2);
+    }
+
+    private static void test15(ApplicationContext context2) {
+        Person person9 = context2.getBean("person9", Person.class);
+        System.out.println(person9);
+    }
+
+    private static void test14(ApplicationContext context2) {
+        Person person8 = context2.getBean("person8", Person.class);
+        System.out.println(person8);
     }
 
     private static void test13(ApplicationContext context2) {
