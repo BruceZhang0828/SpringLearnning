@@ -1,5 +1,6 @@
 package com.zhy.test;
 
+import com.zhy.bean.Book;
 import com.zhy.bean.Person;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -27,7 +28,13 @@ public class SpringDemoTest {
         ApplicationContext context2 = new ClassPathXmlApplicationContext("ioc2.xml");
 //        test09(context2);
 //        test10(context2);
-        test11(context2);
+//        test11(context2);
+        test12(context2);
+    }
+
+    private static void test12(ApplicationContext context2) {
+        Book book3 = context2.getBean("book3", Book.class);
+        System.out.println(book3);
     }
 
     private static void test11(ApplicationContext context2) {

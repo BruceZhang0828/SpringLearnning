@@ -116,4 +116,8 @@
     <bean id="person5" class="com.zhy.bean.Person" parent="person4">
         <property name="name" value="lisi"></property>
     </bean>
+    <!--bean对象在创建的时候是按照bean在配置文件的顺序决定的，也可以使用depend-on标签来决定顺序-->
+    <bean id="book3" class="com.zhy.bean.Book" depends-on="person6,address2"></bean>
+    <bean id="address2" class="com.zhy.bean.Address"></bean>
+    <bean id="person6" class="com.zhy.bean.Person"></bean>
 </beans>

@@ -5,8 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ioc2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ioc2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/zhy/test/SpringDemoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/zhy/test/SpringDemoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/zhy/bean/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/zhy/bean/Person.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ioc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ioc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/com/zhy/test/SpringDemoTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/zhy/test/SpringDemoTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -74,20 +72,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/ioc2.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+            <state relative-caret-position="469">
+              <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/zhy/test/SpringDemoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="33" column="34" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="34" />
+            <state relative-caret-position="327">
+              <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,8 +123,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/zhy/bean/Book.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/zhy/bean/Person.java" />
         <option value="$PROJECT_DIR$/src/main/resources/ioc.xml" />
-        <option value="$PROJECT_DIR$/src/test/java/com/zhy/test/SpringDemoTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/ioc2.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/com/zhy/test/SpringDemoTest.java" />
       </list>
     </option>
   </component>
@@ -279,11 +277,6 @@
               <item name="zhy" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="spring_study2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring_study2" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -347,7 +340,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1586826503929</updated>
-      <workItem from="1586826513059" duration="7795000" />
+      <workItem from="1586826513059" duration="8210000" />
     </task>
     <task id="LOCAL-00001" summary="bean的复杂类型引入">
       <created>1586848235254</created>
@@ -356,11 +349,25 @@
       <option name="project" value="LOCAL" />
       <updated>1586848235254</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="使用ioc来表示继承关系">
+      <created>1586848573777</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586848573777</updated>
+    </task>
+    <task id="LOCAL-00003" summary="表示一种抽象关系">
+      <created>1586848728751</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586848728751</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7795000" />
+    <option name="totallyTimeSpent" value="8210000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1874" height="1096" extended-state="6" />
@@ -370,7 +377,7 @@
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Designer" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24972253" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24972253" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Tail" />
       <window_info anchor="bottom" id="Messages" weight="0.32930845" />
@@ -387,7 +394,7 @@
       <window_info anchor="bottom" id="Debug with VisualVM" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32930845" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32930845" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -444,7 +451,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="bean的复杂类型引入" />
-    <option name="LAST_COMMIT_MESSAGE" value="bean的复杂类型引入" />
+    <MESSAGE value="使用ioc来表示继承关系" />
+    <MESSAGE value="表示一种抽象关系" />
+    <option name="LAST_COMMIT_MESSAGE" value="表示一种抽象关系" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -499,20 +508,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/zhy/test/SpringDemoTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/ioc2.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="33" column="34" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="469">
+          <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/ioc2.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/zhy/test/SpringDemoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+        <state relative-caret-position="327">
+          <caret line="36" column="33" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
