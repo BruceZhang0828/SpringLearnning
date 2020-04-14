@@ -14,7 +14,7 @@ public class SpringDemoTest {
 
 
     public static void main(String[] args) {
-        ApplicationContext context = new ClassPathXmlApplicationContext("ioc.xml");
+//        ApplicationContext context = new ClassPathXmlApplicationContext("ioc.xml");
 //        test01(context);
 //        test02(context);
 //        test03(context);
@@ -22,7 +22,15 @@ public class SpringDemoTest {
 //        test05(context);
 //        test06(context);
 //        test07(context);
-        test08(context);
+//        test08(context);
+
+        ApplicationContext context2 = new ClassPathXmlApplicationContext("ioc2.xml");
+        test09(context2);
+    }
+
+    private static void test09(ApplicationContext context) {
+        Person person = context.getBean("person", Person.class);
+        System.out.println(person);
     }
 
     private static void test08(ApplicationContext context) {
