@@ -1,5 +1,6 @@
 package com.zhy.test;
 
+import com.zhy.bean.Address;
 import com.zhy.bean.Book;
 import com.zhy.bean.Person;
 import com.zhy.factory.MyFactoryBean;
@@ -34,7 +35,15 @@ public class SpringDemoTest {
 //        test13(context2);
 //        test14(context2);
 //        test15(context2);
-        test16(context2);
+//        test16(context2);
+        test17(context2);
+    }
+    //测试bean对象的初始化和销毁方法
+    private static void test17(ApplicationContext context2) {
+        Address address4 = context2.getBean("address4", Address.class);
+        System.out.println(address4);
+        //applicationContext没有close方法，需要使用具体的子类
+        ((ClassPathXmlApplicationContext)context2).close();
     }
 
     private static void test16(ApplicationContext context2) {

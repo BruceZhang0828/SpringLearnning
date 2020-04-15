@@ -12,13 +12,25 @@ import lombok.ToString;
  * @Version: 1.0
  **/
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
 @ToString
 public class Address {
     private String province;
     private String city;
     private String town;
+
+    public Address() {
+        System.out.println("address被创建了");
+    }
+
+    public void init(){
+        System.out.println("对象被初始化");
+    }
+
+    public void destory(){
+        System.out.println("对象被销毁");
+    }
+
 
 
 }
