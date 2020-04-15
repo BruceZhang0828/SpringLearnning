@@ -64,3 +64,7 @@ Spring中包含4个主要的组件添加注解：
 
  3、@AutoWired只适合spring框架，而@Resource扩展性更好
 
+#### 泛型依赖注入
+
+
+
