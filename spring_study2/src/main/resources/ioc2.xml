@@ -162,4 +162,6 @@
         如果bean是多例，获取的时候创建对象，销毁的时候不会有任何的调用
     -->
     <bean id="address4" class="com.zhy.bean.Address" init-method="init" destroy-method="destory"></bean>
+
+    <bean id="myBeanPostProcessor" class="com.zhy.bean.MyBeanPostProcessor"></bean>
 </beans>

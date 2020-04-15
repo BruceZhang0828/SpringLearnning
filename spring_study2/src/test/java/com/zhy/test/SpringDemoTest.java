@@ -36,8 +36,22 @@ public class SpringDemoTest {
 //        test14(context2);
 //        test15(context2);
 //        test16(context2);
-        test17(context2);
+//        test17(context2);
+        test18(context2);
     }
+    /**
+     * @Description 这个方法使用了BeanPostProcessor
+     * @Date 10:30 2020/4/15
+     * @Param [context2]
+     * @return void
+    **/
+    private static void test18(ApplicationContext context2) {
+        Address address4 = context2.getBean("address4", Address.class);
+        System.out.println(address4);
+        ((ClassPathXmlApplicationContext)context2).close();
+    }
+
+
     //测试bean对象的初始化和销毁方法
     private static void test17(ApplicationContext context2) {
         Address address4 = context2.getBean("address4", Address.class);
