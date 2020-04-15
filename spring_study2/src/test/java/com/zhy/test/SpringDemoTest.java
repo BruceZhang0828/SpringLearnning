@@ -30,7 +30,7 @@ public class SpringDemoTest {
 //        test07(context);
 //        test08(context);
 
-        ApplicationContext context2 = new ClassPathXmlApplicationContext("ioc2.xml");
+//        ApplicationContext context2 = new ClassPathXmlApplicationContext("ioc2.xml");
 //        test09(context2);
 //        test10(context2);
 //        test11(context2);
@@ -41,7 +41,43 @@ public class SpringDemoTest {
 //        test16(context2);
 //        test17(context2);
 //        test18(context2);
-        test19(context2);
+//        test19(context2);
+        ApplicationContext context = new ClassPathXmlApplicationContext("ioc3.xml");
+//        test20(context);
+//        test21(context);
+        test22(context);
+    }
+    /**
+     * @Description 通过constructor 注入
+     * @Date 11:19 2020/4/15
+     * @Param [context]
+     * @return void
+    **/
+    private static void test22(ApplicationContext context) {
+        Person person3 = context.getBean("person3", Person.class);
+        System.out.println(person3);
+    }
+
+    /**
+     * @Description 通过类型来注入 byType
+     * @Date 11:19 2020/4/15
+     * @Param [context]
+     * @return void
+    **/
+    private static void test21(ApplicationContext context) {
+        Person person2 = context.getBean("person2", Person.class);
+        System.out.println(person2);
+    }
+
+    /**
+     * @Description 通过byName注入address
+     * @Date 11:16 2020/4/15
+     * @Param [context]
+     * @return void
+    **/
+    private static void test20(ApplicationContext context) {
+        Person person = context.getBean("person", Person.class);
+        System.out.println(person);
     }
 
     private static void test19(ApplicationContext context2) {
