@@ -7,7 +7,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="com.zhy" use-default-filters="false">
+    <context:component-scan base-package="com.zhy">
 
         <!--
        当定义好基础扫描的包之后，可以排除包中的某些类，使用如下的方式:
@@ -20,7 +20,7 @@
        -->
         <!--<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"></context:exclude-filter>-->
         <!--指定只扫描哪些组件，默认情况下是全部扫描的，所以此时要配置的话需要在component-scan标签中添加 use-default-filters="false"-->
-        <context:include-filter type="assignable" expression="com.zhy.service.PersonService"/>
+        <!--<context:include-filter type="assignable" expression="com.zhy.service.PersonService"/>-->
     </context:component-scan>
 
 

@@ -5,17 +5,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
- * @ClassName: PersonService
+ * @ClassName: PersonServiceExt
  * @Description: TODO 留下注释吧
- * @Date: 2020/4/15 19:13
+ * @Date: 2020/4/15 21:29
  * @Version: 1.0
  **/
 @Service
-public class PersonService {
+public class PersonServiceExt extends PersonService {
     @Autowired
     private PersonDao personDao;
 
-    public void getPerson() {
+    @Override
+    public void getPerson(){
+        System.out.println("PersonServiceExt......");
         personDao.getPerson();
     }
 }

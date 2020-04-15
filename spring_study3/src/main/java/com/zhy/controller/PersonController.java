@@ -1,5 +1,7 @@
 package com.zhy.controller;
 
+import com.zhy.service.PersonService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -10,4 +12,15 @@ import org.springframework.stereotype.Controller;
  **/
 @Controller
 public class PersonController {
+    @Autowired
+    private PersonService personServiceExt;
+
+    public PersonController() {
+        System.out.println("创建对象");
+    }
+
+    public void getPerson(){
+        personServiceExt.getPerson();
+    }
+
 }
