@@ -12,6 +12,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class SpringDemoTest {
     public static void main(String[] args) {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        Object personService = context.getBean("personService");
         Object personDao = context.getBean("personDao");
         System.out.println(personDao);
     }
