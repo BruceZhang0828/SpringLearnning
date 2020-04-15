@@ -2,12 +2,14 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
        xmlns:util="http://www.springframework.org/schema/util"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/util
-       https://www.springframework.org/schema/util/spring-util.xsd"
->
+       https://www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
     <bean id="person" class="com.zhy.bean.Person">
         <property name="name">
             <!--传递空值-->
@@ -163,5 +165,14 @@
     -->
     <bean id="address4" class="com.zhy.bean.Address" init-method="init" destroy-method="destory"></bean>
 
-    <bean id="myBeanPostProcessor" class="com.zhy.bean.MyBeanPostProcessor"></bean>
+    <!--<bean id="myBeanPostProcessor" class="com.zhy.bean.MyBeanPostProcessor"></bean>-->
+
+    <!--加载外部配置文件-->
+    <context:property-placeholder location="classpath:dbconfig.properties"></context:property-placeholder>
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="username" value="${username}"></property>
+        <property name="password" value="${password}"></property>
+        <property name="url" value="${url}"></property>
+        <property name="driverClassName" value="${driverClassName}"></property>
+    </bean>
 </beans>

@@ -1,11 +1,14 @@
 package com.zhy.test;
 
+import com.alibaba.druid.pool.DruidDataSource;
 import com.zhy.bean.Address;
 import com.zhy.bean.Book;
 import com.zhy.bean.Person;
 import com.zhy.factory.MyFactoryBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import java.sql.SQLException;
 
 /**
  * @ClassName: SpringDemoTest
@@ -37,8 +40,20 @@ public class SpringDemoTest {
 //        test15(context2);
 //        test16(context2);
 //        test17(context2);
-        test18(context2);
+//        test18(context2);
+        test19(context2);
     }
+
+    private static void test19(ApplicationContext context2) {
+        try {
+            DruidDataSource dataSource = context2.getBean("dataSource", DruidDataSource.class);
+            System.out.println(dataSource);
+            System.out.println(dataSource.getConnection());
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
     /**
      * @Description 这个方法使用了BeanPostProcessor
      * @Date 10:30 2020/4/15
