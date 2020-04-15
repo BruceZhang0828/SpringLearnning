@@ -54,3 +54,13 @@ Spring中包含4个主要的组件添加注解：
 
 当我们查看@AutoWired注解的源码的时候发现，此注解不仅可以使用在成员变量上，也可以使用在方法上。
 
+#### 自动装配的注解@AutoWired，@Resource
+
+在使用自动装配的时候，出了可以使用@AutoWired注解之外，还可以使用@Resource注解，大家需要知道这两个注解的区别。
+
+ 1、@AutoWired:是spring中提供的注解，@Resource:是jdk中定义的注解，依靠的是java的标准
+
+ 2、@AutoWired默认是按照类型进行装配，默认情况下要求依赖的对象必须存在，@Resource默认是按照名字进行匹配的，同时可以指定name属性。
+
+ 3、@AutoWired只适合spring框架，而@Resource扩展性更好
+

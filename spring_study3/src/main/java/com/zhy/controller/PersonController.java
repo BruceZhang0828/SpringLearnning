@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
+import javax.annotation.Resource;
+
 /**
  * @ClassName: PersonController
  * @Description: TODO 留下注释吧
@@ -14,8 +16,8 @@ import org.springframework.stereotype.Controller;
  **/
 @Controller
 public class PersonController {
-    @Autowired
     @Qualifier("personService")
+    @Resource
     private PersonService personServiceExt;
 
     public PersonController() {
