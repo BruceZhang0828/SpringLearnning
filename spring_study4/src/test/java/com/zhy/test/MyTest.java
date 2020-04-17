@@ -1,6 +1,8 @@
 package com.zhy.test;
 
+import com.zhy.inter.Calculator;
 import com.zhy.inter.MyCalculator;
+import com.zhy.proxy.CalculatorProxy;
 
 /**
  * @ClassName: MyTest
@@ -11,6 +13,7 @@ import com.zhy.inter.MyCalculator;
 public class MyTest {
     public static void main(String[] args) {
         MyCalculator myCalculator = new MyCalculator();
-        System.out.println(myCalculator.add(1, 2));
+        Calculator proxy = CalculatorProxy.getProxy(myCalculator);
+        System.out.println(proxy.add(1, 2));
     }
 }
