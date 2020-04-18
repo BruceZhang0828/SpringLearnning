@@ -39,13 +39,13 @@ public class CalculatorProxy {
             public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
                 Object result = null;
                 try {
-                    LogUtil.start();
+                    // LogUtil.start();
                     result = method.invoke(calculator, args);
-                    LogUtil.stop();
+                    // LogUtil.stop();
                 } catch (Exception e) {
-                    LogUtil.logException();
+                    //LogUtil.logException();
                 } finally {
-                    LogUtil.end();
+                    // LogUtil.end();
                 }
                 //将结果返回回去
                 return result;

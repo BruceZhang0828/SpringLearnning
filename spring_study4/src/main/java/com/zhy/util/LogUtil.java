@@ -1,5 +1,6 @@
 package com.zhy.util;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.*;
 import org.springframework.stereotype.Component;
 
@@ -29,27 +30,33 @@ public class LogUtil {
     */
 
     @Before("execution(public int com.zhy.inter.MyCalculator.*(int ,int))")
-    public static void start(){
+    public static void start(JoinPoint joinPoint){
 //        System.out.println("XXX方法开始执行，使用的参数是："+ Arrays.asList(objects));
 //        System.out.println(method.getName()+"方法开始执行，参数是："+ Arrays.asList(objects));
-        System.out.println("方法开始执行,参数是:");
+        Object[] args = joinPoint.getArgs();
+        String name = joinPoint.getSignature().getName();
+        System.out.println(name+"方法开始执行,参数是:"+Arrays.asList(args));
     }
 
-    @AfterReturning("execution(public int com.zhy.inter.MyCalculator.*(int ,int))")
-    public static void stop(){
+    @AfterReturning(value = "execution(public int com.zhy.inter.MyCalculator.*(int ,int))",returning = "result")
+    public static void stop(JoinPoint joinPoint,Object result){
 //        System.out.println("XXX方法执行结束，结果是："+ Arrays.asList(objects));
 //        System.out.println(method.getName()+"方法开始执行，参数是："+ Arrays.asList(objects));
-        System.out.println("方法执行完成，结果是：");
+        String name = joinPoint.getSignature().getName();
+        System.out.println(name+"方法执行完成，结果是："+result);
     }
 
-    @AfterThrowing("execution( public int com.zhy.inter.MyCalculator.*(int,int))")
-    public static void logException(){
+    @AfterThrowing(value = "execution( public int com.zhy.inter.MyCalculator.*(int,int))",throwing = "exception")
+    public static void logException(JoinPoint joinPoint,Exception exception){
 //        System.out.println(method.getName()+"方法出现异常："+ e.getMessage());
-        System.out.println("方法出现异常：");
+        String name = joinPoint.getSignature().getName();
+        System.out.println(name+"方法出现异常："+exception);
     }
 
     @After("execution( public int com.zhy.inter.MyCalculator.*(int,int))")
-    public static void end(){
+    public static void end(JoinPoint joinPoint){
 //        System.out.println(method.getName()+"方法执行结束了......");
+        String name = joinPoint.getSignature().getName();
+        System.out.println(name+"方法执行结束了......");
     }
 }
