@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
  * @Version: 1.0
  **/
 @Service
-public class MyCalculator implements Calculator{
+public class MyCalculator{
 
     public int add(int i, int j) {
         int result = i + j;

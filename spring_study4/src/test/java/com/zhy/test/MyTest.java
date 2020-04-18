@@ -18,7 +18,7 @@ public class MyTest {
 //        Calculator proxy = CalculatorProxy.getProxy(myCalculator);
 //        System.out.println(proxy.add(1, 2));
         ApplicationContext context = new ClassPathXmlApplicationContext("aop.xml");
-        Calculator bean = context.getBean(Calculator.class);
+        MyCalculator bean = context.getBean(MyCalculator.class);
         System.out.println(bean);
         System.out.println(bean.getClass());
         bean.add(1,1);
