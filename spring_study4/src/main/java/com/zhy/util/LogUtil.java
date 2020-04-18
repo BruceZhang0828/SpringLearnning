@@ -17,6 +17,10 @@ import java.util.Arrays;
 @Aspect
 public class LogUtil {
 
+
+    @Pointcut("execution( public int com.zhy.inter.MyCalculator.*(int,int))")
+    public void myPoint(){}
+
     /*
    设置下面方法在什么时候运行
        @Before:在目标方法之前运行：前置通知
@@ -29,7 +33,7 @@ public class LogUtil {
        execution(访问修饰符  返回值类型 方法全称)
     */
 
-    @Before("execution(public int com.zhy.inter.MyCalculator.*(int ,int))")
+    @Before("myPoint()")
     public static void start(JoinPoint joinPoint){
 //        System.out.println("XXX方法开始执行，使用的参数是："+ Arrays.asList(objects));
 //        System.out.println(method.getName()+"方法开始执行，参数是："+ Arrays.asList(objects));
@@ -38,7 +42,7 @@ public class LogUtil {
         System.out.println(name+"方法开始执行,参数是:"+Arrays.asList(args));
     }
 
-    @AfterReturning(value = "execution(public int com.zhy.inter.MyCalculator.*(int ,int))",returning = "result")
+    @AfterReturning(value = "myPoint()",returning = "result")
     public static void stop(JoinPoint joinPoint,Object result){
 //        System.out.println("XXX方法执行结束，结果是："+ Arrays.asList(objects));
 //        System.out.println(method.getName()+"方法开始执行，参数是："+ Arrays.asList(objects));
@@ -46,14 +50,14 @@ public class LogUtil {
         System.out.println(name+"方法执行完成，结果是："+result);
     }
 
-    @AfterThrowing(value = "execution( public int com.zhy.inter.MyCalculator.*(int,int))",throwing = "exception")
+    @AfterThrowing(value = "myPoint()",throwing = "exception")
     public static void logException(JoinPoint joinPoint,Exception exception){
 //        System.out.println(method.getName()+"方法出现异常："+ e.getMessage());
         String name = joinPoint.getSignature().getName();
         System.out.println(name+"方法出现异常："+exception);
     }
 
-    @After("execution( public int com.zhy.inter.MyCalculator.*(int,int))")
+    @After("myPoint()")
     public static void end(JoinPoint joinPoint){
 //        System.out.println(method.getName()+"方法执行结束了......");
         String name = joinPoint.getSignature().getName();
