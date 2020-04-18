@@ -1,6 +1,7 @@
 package com.zhy.inter;
 
 import com.zhy.util.LogUtil;
+import org.springframework.stereotype.Service;
 
 /**
  * @ClassName: MyCalculator
@@ -8,6 +9,7 @@ import com.zhy.util.LogUtil;
  * @Date: 2020/4/16 8:57
  * @Version: 1.0
  **/
+@Service
 public class MyCalculator implements Calculator{
 
     public int add(int i, int j) {
