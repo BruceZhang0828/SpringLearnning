@@ -51,6 +51,13 @@
             <artifactId>spring-aspects</artifactId>
             <version>5.2.3.RELEASE</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-orm -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-orm</artifactId>
+            <version>5.2.3.RELEASE</version>
+        </dependency>
     </dependencies>
 
 </project>
