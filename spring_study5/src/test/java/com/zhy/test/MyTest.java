@@ -17,6 +17,9 @@ public class MyTest {
     public static void main(String[] args) throws SQLException {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         JdbcTemplate jdbcTemplate = context.getBean("jdbcTemplate", JdbcTemplate.class);
+        String sql = "insert into emp(empno,ename) values(?,?) ";
+        int result = jdbcTemplate.update(sql, 11111, "zhangsan");
+        System.out.println(result);
         System.out.println(jdbcTemplate);
     }
 }
