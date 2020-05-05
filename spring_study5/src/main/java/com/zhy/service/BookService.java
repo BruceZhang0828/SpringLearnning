@@ -23,10 +23,19 @@ public class BookService {
      * @param id
      */
     // 开启注解
-    @Transactional(timeout = 3,readOnly = true)
+    /*@Transactional(timeout = 3,noRollbackFor = {ArithmeticException.class,NullPointerException.class})
     public void checkout(String username,int id){
         bookDao.updateStock(id);
         int price = bookDao.getPrice(id);
         bookDao.updateBalance(username,price);
+        int i = 1/0;
+    }*/
+
+    @Transactional(timeout = 3,noRollbackForClassName = {"java.lang.ArithmeticException"})
+    public void checkout(String username,int id){
+        bookDao.updateStock(id);
+        int price = bookDao.getPrice(id);
+        bookDao.updateBalance(username,price);
+        int i = 1/0;
     }
 }

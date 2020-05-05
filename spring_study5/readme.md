@@ -36,7 +36,7 @@ isolation：设置事务的隔离级别
 
  timeout：事务超出指定执行时长后自动终止并回滚,单位是秒
 
-
+##### timeout:
 
  timeout = 3 : 3秒如果没有正常执行完成则抛出异常
 
@@ -44,7 +44,7 @@ isolation：设置事务的隔离级别
 org.springframework.transaction.TransactionTimedOutException: Transaction timed out: deadline was Tue May 05 16:49:34 CST 2020
 ```
 
-设置事务只读 :
+##### 设置事务只读 :
 
 ​	如果你一次执行单条查询语句，则没有必要启用事务支持，数据库默认支持SQL执行期间的读一致性；
 
@@ -57,6 +57,8 @@ org.springframework.transaction.TransactionTimedOutException: Transaction timed 
 ```java
 java.sql.SQLException: Connection is read-only. Queries leading to data modification are not allowed
 ```
+
+##### 设置哪些异常不回滚:
 
 
 
