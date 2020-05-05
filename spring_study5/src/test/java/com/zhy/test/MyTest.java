@@ -6,10 +6,13 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @ClassName: MyTest
@@ -48,6 +51,16 @@ public class MyTest {
 //        String sql = "select max(sal) from emp";
 //        Double aDouble = jdbcTemplate.queryForObject(sql, Double.class);
 //        System.out.println(aDouble);
-        System.out.println(jdbcTemplate);
+
+//        System.out.println(jdbcTemplate);
+        // 使用具备具名函数的JdbcTemplate
+        NamedParameterJdbcTemplate namedParameterJdbcTemplate = context.getBean("namedParameterJdbcTemplate", NamedParameterJdbcTemplate.class);
+        String sql = "insert into emp(empno,ename) values(:empno,:ename)";
+        Map<String,Object> map = new HashMap<>();
+        map.put("empno",2222);
+        map.put("ename","sili");
+        int update = namedParameterJdbcTemplate.update(sql, map);
+        System.out.println(update);
+        System.out.println(namedParameterJdbcTemplate);
     }
 }
