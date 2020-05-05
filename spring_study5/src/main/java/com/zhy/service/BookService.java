@@ -35,7 +35,7 @@ public class BookService {
         int i = 1/0;
     }*/
 
-    @Transactional(propagation = Propagation.REQUIRES_NEW)
+    @Transactional(propagation = Propagation.REQUIRED)
     public void checkout(String username,int id) {
         bookDao.updateStock(id);
         int price = bookDao.getPrice(id);
@@ -46,6 +46,5 @@ public class BookService {
     @Transactional(propagation = Propagation.REQUIRED)
     public void updatePrice(int id,int price){
         bookDao.updatePrice(id,price);
-        int i = 1/0;
     }
 }

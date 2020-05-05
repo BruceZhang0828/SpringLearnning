@@ -20,5 +20,6 @@ public class MulService {
     public void mulTx(){
         bookService.checkout("zhangsan",1);
         bookService.updatePrice(1,1000);
+        int i = 1/0;
     }
 }

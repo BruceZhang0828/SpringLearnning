@@ -82,7 +82,7 @@ rollbackFor = {FileNotFoundException.class}
 
 spring的事务传播特性一共有7种:
 
-Required :  如果设置的传播特性是Required，那么所有的事务都会统一成一个事务，一旦发生错误，所有的数据都要进行回滚。
+required + required :  如果设置的传播特性是Required，那么所有的事务都会统一成一个事务，一旦发生错误，所有的数据都要进行回滚。
 
-
+required + required _new :   
 
