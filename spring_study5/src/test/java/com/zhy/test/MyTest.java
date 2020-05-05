@@ -74,10 +74,11 @@ public class MyTest {
 //        emp.setEname("wangwu");
 //        empDao.save(emp);
         // 声明式事务
-//        BookService bookService = context.getBean("bookService", BookService.class);
+        BookService bookService = context.getBean("bookService", BookService.class);
 //        bookService.checkout("zhangsan",1);
-        MulService mulService = context.getBean("mulService", MulService.class);
-        mulService.mulTx();
+//        MulService mulService = context.getBean("mulService", MulService.class);
+//        mulService.mulTx();
+        bookService.mulTx();
 
     }
 }

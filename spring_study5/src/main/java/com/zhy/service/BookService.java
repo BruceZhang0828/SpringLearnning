@@ -47,4 +47,11 @@ public class BookService {
     public void updatePrice(int id,int price){
         bookDao.updatePrice(id,price);
     }
+
+    @Transactional
+    public void mulTx(){
+        checkout("zhangsan",1);
+        updatePrice(1,1000);
+        int i = 1/0;
+    }
 }
