@@ -3,6 +3,7 @@ package com.zhy.service;
 import com.zhy.dao.BookDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * @ClassName: BookService
@@ -21,8 +22,15 @@ public class BookService {
      * @param username
      * @param id
      */
+    // 开启注解
+    @Transactional(timeout = 3)
     public void checkout(String username,int id){
 
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         bookDao.updateStock(id);
         int price = bookDao.getPrice(id);
         bookDao.updateBalance(username,price);
