@@ -2,6 +2,7 @@ package com.zhy.test;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.zhy.bean.Emp;
+import com.zhy.dao.EmpDao;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -22,8 +23,8 @@ import java.util.Map;
  **/
 public class MyTest {
     public static void main(String[] args) throws SQLException {
-        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        JdbcTemplate jdbcTemplate = context.getBean("jdbcTemplate", JdbcTemplate.class);
+//        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+//        JdbcTemplate jdbcTemplate = context.getBean("jdbcTemplate", JdbcTemplate.class);
 //        String sql = "insert into emp(empno,ename) values(?,?) ";
 //         int result = jdbcTemplate.update(sql, 11111, "zhangsan");
 //        System.out.println(result);
@@ -54,13 +55,21 @@ public class MyTest {
 
 //        System.out.println(jdbcTemplate);
         // 使用具备具名函数的JdbcTemplate
-        NamedParameterJdbcTemplate namedParameterJdbcTemplate = context.getBean("namedParameterJdbcTemplate", NamedParameterJdbcTemplate.class);
-        String sql = "insert into emp(empno,ename) values(:empno,:ename)";
-        Map<String,Object> map = new HashMap<>();
-        map.put("empno",2222);
-        map.put("ename","sili");
-        int update = namedParameterJdbcTemplate.update(sql, map);
-        System.out.println(update);
-        System.out.println(namedParameterJdbcTemplate);
+//        NamedParameterJdbcTemplate namedParameterJdbcTemplate = context.getBean("namedParameterJdbcTemplate", NamedParameterJdbcTemplate.class);
+//        String sql = "insert into emp(empno,ename) values(:empno,:ename)";
+//        Map<String,Object> map = new HashMap<>();
+//        map.put("empno",2222);
+//        map.put("ename","sili");
+//        int update = namedParameterJdbcTemplate.update(sql, map);
+//        System.out.println(update);
+//        System.out.println(namedParameterJdbcTemplate);
+
+        // 整合Dao层
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        EmpDao empDao = context.getBean("empDao", EmpDao.class);
+        Emp emp = new Emp();
+        emp.setEmpno(3333);
+        emp.setEname("wangwu");
+        empDao.save(emp);
     }
 }
