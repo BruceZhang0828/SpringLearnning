@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
+import java.io.FileNotFoundException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,7 +24,7 @@ import java.util.Map;
  * @Version: 1.0
  **/
 public class MyTest {
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) throws SQLException, FileNotFoundException {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 //        JdbcTemplate jdbcTemplate = context.getBean("jdbcTemplate", JdbcTemplate.class);
 //        String sql = "insert into emp(empno,ename) values(?,?) ";

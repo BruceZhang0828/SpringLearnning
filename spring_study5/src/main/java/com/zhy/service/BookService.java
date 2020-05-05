@@ -5,6 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
 /**
  * @ClassName: BookService
  * @Description: TODO 留下注释吧
@@ -31,11 +34,12 @@ public class BookService {
         int i = 1/0;
     }*/
 
-    @Transactional(timeout = 3,noRollbackForClassName = {"java.lang.ArithmeticException"})
-    public void checkout(String username,int id){
+    @Transactional(timeout = 3,rollbackFor = {FileNotFoundException.class})
+    public void checkout(String username,int id) throws FileNotFoundException {
         bookDao.updateStock(id);
         int price = bookDao.getPrice(id);
         bookDao.updateBalance(username,price);
-        int i = 1/0;
+//        int i = 1/0;
+        new FileInputStream("aaa.txt");
     }
 }

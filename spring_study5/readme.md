@@ -60,5 +60,17 @@ java.sql.SQLException: Connection is read-only. Queries leading to data modifica
 
 ##### 设置哪些异常不回滚:
 
+```java
+noRollbackFor = {ArithmeticException.class,NullPointerException.class}
+
+noRollbackForClassName = {"java.lang.ArithmeticException"}
+```
+
+##### 设置哪些异常回滚:
+
+```java
+rollbackFor = {FileNotFoundException.class}
+```
+
 
 
