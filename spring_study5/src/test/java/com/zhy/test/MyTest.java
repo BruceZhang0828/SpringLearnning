@@ -4,6 +4,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 import com.zhy.bean.Emp;
 import com.zhy.dao.EmpDao;
 import com.zhy.service.BookService;
+import com.zhy.service.MulService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
@@ -73,9 +74,10 @@ public class MyTest {
 //        emp.setEname("wangwu");
 //        empDao.save(emp);
         // 声明式事务
-        BookService bookService = context.getBean("bookService", BookService.class);
-        bookService.checkout("zhangsan",1);
-
+//        BookService bookService = context.getBean("bookService", BookService.class);
+//        bookService.checkout("zhangsan",1);
+        MulService mulService = context.getBean("mulService", MulService.class);
+        mulService.mulTx();
 
     }
 }

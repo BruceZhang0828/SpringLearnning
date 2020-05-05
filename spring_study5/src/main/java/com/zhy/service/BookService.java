@@ -3,6 +3,7 @@ package com.zhy.service;
 import com.zhy.dao.BookDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.io.FileInputStream;
@@ -34,12 +35,17 @@ public class BookService {
         int i = 1/0;
     }*/
 
-    @Transactional(timeout = 3,rollbackFor = {FileNotFoundException.class})
-    public void checkout(String username,int id) throws FileNotFoundException {
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void checkout(String username,int id) {
         bookDao.updateStock(id);
         int price = bookDao.getPrice(id);
         bookDao.updateBalance(username,price);
-//        int i = 1/0;
-        new FileInputStream("aaa.txt");
+    }
+
+
+    @Transactional(propagation = Propagation.REQUIRED)
+    public void updatePrice(int id,int price){
+        bookDao.updatePrice(id,price);
+        int i = 1/0;
     }
 }

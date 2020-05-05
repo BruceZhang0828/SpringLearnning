@@ -72,5 +72,17 @@ noRollbackForClassName = {"java.lang.ArithmeticException"}
 rollbackFor = {FileNotFoundException.class}
 ```
 
+##### 设置隔离级别:
+
+
+
+##### 事务的传播特性:
+
+**事务的传播特性**指的是当一个事务方法被另一个事务方法调用时，这个事务方法应该如何进行？
+
+spring的事务传播特性一共有7种:
+
+Required :  如果设置的传播特性是Required，那么所有的事务都会统一成一个事务，一旦发生错误，所有的数据都要进行回滚。
+
 
 
