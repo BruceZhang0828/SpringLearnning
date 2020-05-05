@@ -6,6 +6,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @ClassName: MyTest
@@ -18,8 +20,18 @@ public class MyTest {
         ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         JdbcTemplate jdbcTemplate = context.getBean("jdbcTemplate", JdbcTemplate.class);
         String sql = "insert into emp(empno,ename) values(?,?) ";
-        int result = jdbcTemplate.update(sql, 11111, "zhangsan");
-        System.out.println(result);
+        // int result = jdbcTemplate.update(sql, 11111, "zhangsan");
+        //System.out.println(result);
+        // 执行批量插入
+        List list = new ArrayList<Object[]>();
+        list.add(new Object[]{1,"zhangsan1"});
+        list.add(new Object[]{2,"zhangsan2"});
+        list.add(new Object[]{3,"zhangsan3"});
+        int[] ints = jdbcTemplate.batchUpdate(sql, list);
+
+        for (int i : ints) {
+            System.out.println(i);
+        }
         System.out.println(jdbcTemplate);
     }
 }
