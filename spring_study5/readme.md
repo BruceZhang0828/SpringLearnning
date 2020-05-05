@@ -38,3 +38,25 @@ isolation：设置事务的隔离级别
 
 
 
+ timeout = 3 : 3秒如果没有正常执行完成则抛出异常
+
+```java
+org.springframework.transaction.TransactionTimedOutException: Transaction timed out: deadline was Tue May 05 16:49:34 CST 2020
+```
+
+设置事务只读 :
+
+​	如果你一次执行单条查询语句，则没有必要启用事务支持，数据库默认支持SQL执行期间的读一致性；
+
+​	如果你一次执行多条查询语句，例如统计查询，报表查询，在这种场景下，多条查询SQL必须保证整体的读一致性，否则，在前条SQL查询之后，后条SQL查询之前，数据被其他用户改变，则该次整体的统计查询将会出现读数据不一致的状态，此时，应该启用事务支持。
+
+ 	对于只读查询，可以指定事务类型为readonly，即只读事务。由于只读事务不存在数据的修改，因此数据库将会为只读事务提供一些优化手段。
+
+​	'ready-only'设置为true的时候,执行update语句,直接抛出错误:
+
+```java
+java.sql.SQLException: Connection is read-only. Queries leading to data modification are not allowed
+```
+
+
+

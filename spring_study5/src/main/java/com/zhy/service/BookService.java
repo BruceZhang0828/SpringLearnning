@@ -23,14 +23,8 @@ public class BookService {
      * @param id
      */
     // 开启注解
-    @Transactional(timeout = 3)
+    @Transactional(timeout = 3,readOnly = true)
     public void checkout(String username,int id){
-
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         bookDao.updateStock(id);
         int price = bookDao.getPrice(id);
         bookDao.updateBalance(username,price);
