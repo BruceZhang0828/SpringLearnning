@@ -15,12 +15,9 @@ import java.io.FileNotFoundException;
  * @Date: 2020/5/5 16:04
  * @Version: 1.0
  **/
-@Service
 public class BookService {
     @Autowired
     BookDao bookDao;
-
-
     /**
      * 结账：传入哪个用户买了哪本书
      * @param username
@@ -35,20 +32,19 @@ public class BookService {
         int i = 1/0;
     }*/
 
-    @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void checkout(String username,int id) {
         bookDao.updateStock(id);
         int price = bookDao.getPrice(id);
         bookDao.updateBalance(username,price);
+        int i = 1/0;
     }
 
 
-    @Transactional(propagation = Propagation.REQUIRES_NEW)
+
     public void updatePrice(int id,int price){
         bookDao.updatePrice(id,price);
     }
 
-    @Transactional
     public void mulTx(){
         checkout("zhangsan",1);
         updatePrice(1,1000);
